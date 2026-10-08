@@ -32,8 +32,6 @@ a deep learning pipeline that decides whether a patient has a **pulmonary emboli
 | resnet18 | imagenet-pretrained, fine-tuned, early layers frozen | 0.705 |
 | **efficientnet-b0** | imagenet-pretrained, fine-tuned, early layers frozen | **0.729** |
 
-a learned patient-level "stage 2" model (logistic regression / gradient boosting on slice-score patterns) was also tested and **did not beat** the simple top-5 average.
-
 ## final result (450 unseen test patients)
 efficientnet-b0 + top-5 average, cutoff 0.68 (chosen on validation):
 
