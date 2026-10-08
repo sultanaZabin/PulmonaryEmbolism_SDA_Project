@@ -5,7 +5,7 @@
 ##
 
 a deep learning pipeline that decides whether a patient has a **pulmonary embolism (pe)**, a blood clot in the lung arteries, from a ct pulmonary angiography scan. the priority is **high recall**: missing a sick patient is worse than a false alarm.
-![Uploading HHIZ4q16r6e_XpPODmRrRBPEjquBpRffUrBZ8PFg7t-kobfgK_JiSID7iA-BRAXf1cVxlrDnQQ8HjWWv1h3ztmqeNhF88AYsVgWPO1hxF1F_JyT3A3l94Ey0FcMtJ9LbUoZ5C5klXccz-cg0Ugb2ovjvvzlPeDDC0n9Wdv52maWxGJVBBwPaD8j5URYg2Bwm.jpg…]()
+
 
 > ⚠️ research prototype for an academic project. **not a medical device** and not for clinical use.
 
