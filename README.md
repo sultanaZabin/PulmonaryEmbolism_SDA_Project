@@ -1,4 +1,7 @@
 # pulmonary embolism detection from ct scans
+## authors
+- [@sultanaZabin](https://github.com/sultanaZabin)
+- [@RubaaAlghamdi](https://github.com/RubaaAlghamdi)
 
 a deep learning pipeline that decides whether a patient has a **pulmonary embolism (pe)**, a blood clot in the lung arteries, from a ct pulmonary angiography scan. the priority is **high recall**: missing a sick patient is worse than a false alarm.
 
