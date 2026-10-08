@@ -43,14 +43,20 @@ efficientnet-b0 + top-5 average, cutoff 0.68 (chosen on validation):
 | specificity | 0.33 |
 | f1 | 0.53 |
 
-## files
-| file | what it is |
-|---|---|
-| `training_notebook.ipynb` | full pipeline: preprocessing, training of all 3 models, evaluation, grad-cam, error analysis |
-| `models/best_effnet.pt` | final model (efficientnet-b0) |
-| `models/best_resnet18_frozen.pt` | resnet18 weights |
-| `models/best_pe_ct_cnn.pt` | baseline weights |
-| `picked.csv` | the 3000 patients used |
+## repository structure
+```
+├── final committed project/      ← the actual project: everything needed to reproduce the results
+│   ├── training_notebook.ipynb   ← full pipeline: preprocessing, training of all 3 models, evaluation, grad-cam, error analysis
+│   ├── models/
+│   │   ├── best_effnet.pt        ← final model (efficientnet-b0)
+│   │   ├── best_resnet18_frozen.pt
+│   │   └── best_pe_ct_cnn.pt     ← baseline
+│   └── picked.csv                ← the 3000 patients used
+├── extra code                    ← additional / experimental code, not part of the final pipeline
+└── README.md
+```
+
+**start with `final committed project/`.** `extra code` holds extra work kept for reference; the results above don't depend on it.
 
 ## how to run
 the notebook was built on **kaggle** (gpu t4): create a notebook from the competition page so the data is attached, then run the cells in order. preprocessing takes ~1 hour, each model ~40 min to train.
@@ -60,7 +66,7 @@ to load the final model:
 import torch, torchvision
 model = torchvision.models.efficientnet_b0(weights=None)
 model.classifier[1] = torch.nn.Linear(model.classifier[1].in_features, 1)
-model.load_state_dict(torch.load("models/best_effnet.pt", map_location="cpu"))
+model.load_state_dict(torch.load("final committed project/models/best_effnet.pt", map_location="cpu"))
 model.eval()
 ```
 
