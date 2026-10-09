@@ -43,19 +43,6 @@ efficientnet-b0 + top-5 average, cutoff 0.68 (chosen on validation):
 | specificity | 0.33 |
 | f1 | 0.53 |
 
-## repository structure
-```
-├── final committed project/      ← the actual project: everything needed to reproduce the results
-│   ├── training_notebook.ipynb   ← full pipeline: preprocessing, training of all 3 models, evaluation, grad-cam, error analysis
-│   ├── models/
-│   │   ├── best_effnet.pt        ← final model (efficientnet-b0)
-│   │   ├── best_resnet18_frozen.pt
-│   │   └── best_pe_ct_cnn.pt     ← baseline
-│   └── picked.csv                ← the 3000 patients used
-├── extra code                    ← additional / experimental code, not part of the final pipeline
-└── README.md
-```
-
 **start with `final committed project/`.** `extra code` holds extra work kept for reference; the results above don't depend on it.
 
 ## how to run
